@@ -15,6 +15,24 @@ class AdminModel extends CI_Model
         return $res->result_array();
     }
 
+    public function get_data_pelanggan()
+    {
+        $data = $this->db->select('*')
+            ->from('tb_pelanggan')
+            ->get();
+        return $data->result();
+    }
+
+    public function tambah_pelanggan($data)
+    {
+        $this->db->insert('tb_pelanggan', $data);
+        $this->session->set_flashdata('sukses', "data pelanggan berhasil ditambahkan");
+        return TRUE;
+    }
+
+
+
+
 
 
     public function get_all_tunggakan()

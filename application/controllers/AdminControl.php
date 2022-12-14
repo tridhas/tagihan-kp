@@ -88,7 +88,7 @@ class AdminControl extends CI_Controller
         );
 
         $this->AdminModel->tambah_pelanggan($data);
-        redirect('AdminControl/data_pelanggan');
+        redirect('AdminControl/daftar_pelanggan');
     }
 
     public function pembayaran_manual()

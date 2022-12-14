@@ -2,14 +2,14 @@
 <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('AdminControl/dashboard'); ?>">
-                <div class="sidebar-brand-icon">
-                        <!-- <img class="img-profile rounded-circle " src="<?= base_url('assets/img/profile/') . $user['image']; ?>"> -->
-                        <i class="fas fa-fw fa-city"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">CLUSTER ANDALUS</div>
-        </a>
         <?php if ($session['role_id'] == 1) { ?>
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('AdminControl/dashboard'); ?>">
+                        <div class="sidebar-brand-icon">
+                                <!-- <img class="img-profile rounded-circle " src="<?= base_url('assets/img/profile/') . $user['image']; ?>"> -->
+                                <i class="fas fa-fw fa-city"></i>
+                        </div>
+                        <div class="sidebar-brand-text mx-3">CLUSTER ANDALUS</div>
+                </a>
                 <!-- Divider -->
                 <hr class="sidebar-divider">
                 <!-- Nav Item - Dashboard -->
@@ -69,7 +69,13 @@
                 </li> -->
 
         <?php } else { ?>
-
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('MemberControl/dashboard'); ?>">
+                        <div class="sidebar-brand-icon">
+                                <!-- <img class="img-profile rounded-circle " src="<?= base_url('assets/img/profile/') . $user['image']; ?>"> -->
+                                <i class="fas fa-fw fa-city"></i>
+                        </div>
+                        <div class="sidebar-brand-text mx-3">CLUSTER ANDALUS</div>
+                </a>
                 <!-- Divider -->
                 <hr class="sidebar-divider">
 
@@ -84,12 +90,6 @@
                         <a class="nav-link" href="<?= base_url('MemberControl/info_tagihan'); ?>">
                                 <i class="fas fa-fw fa-file"></i>
                                 <span>Info Tagihan Anda</span>
-                        </a>
-                </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('MemberControl/info_himbauan'); ?>">
-                                <i class="fas fa-fw fa-bullhorn"></i>
-                                <span>Info Himbauan</span>
                         </a>
                 </li>
 
